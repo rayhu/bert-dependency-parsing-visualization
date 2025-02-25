@@ -4,8 +4,6 @@ This project visualizes BERT's attention weights using network graphs. It helps 
 
 ## Environment Setup
 
-### Option 1: Using Conda (Recommended)
-
 1. Create a new conda environment:
    ```bash
     conda env create -f environment.yml
