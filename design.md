@@ -37,14 +37,13 @@ Rationale: Not every head learns syntactic structures, so identifying specific h
 
 **Method:**
 
-Select the right heads.
-As BERT has 12 layers and 12 heads in each layer. We have 144 possible heads to investigate.
+1. Select the right heads. As BERT has 12 layers and 12 heads in each layer. We have 144 possible heads to investigate. Lower layers first.
 
-Analyze each attention head in each layer separately.
+2. Analyze each attention head in each layer separately.
 
-Calculate the matching score between each head's attention graph and the Gold Dependency Tree.
+3. Calculate the matching score between each head's attention graph and the Gold Dependency Tree.
 
-Matching Metrics:
+**Matching Metrics:**
 
 UAS (Unlabeled Attachment Score): Checks if the dependency relations are correct without considering the labels.
 
@@ -53,13 +52,19 @@ LAS (Labeled Attachment Score): Considers both dependency relations and labels.
 Select the heads with the highest matching scores.
 
 **Steps:**
-Collect a Gold Dependency Tree dataset, such as Universal Dependencies (UD) Treebanks.
-Iterate through each layer and each head, generating the attention graph.
-Calculate UAS and LAS for each head.
-Select the heads with the highest UAS and LAS scores.
+
+1. Collect a Gold Dependency Tree dataset, such as Universal Dependencies (UD) Treebanks.
+
+2. Iterate through each layer and each head, generating the attention graph.
+
+3. Calculate UAS and LAS for each head.
+
+4. Select the heads with the highest UAS and LAS scores.
 
 **Expected Outcome:**
+
 Some attention heads will show high UAS and LAS, indicating they are more likely to learn dependency relations.
+
 Most attention heads will learn other types of information, such as semantic relations.
 
 ### 2. Layer-wise Accumulated Attention Analysis
@@ -72,18 +77,27 @@ Rationale: Single-layer attention may not reveal dependency relations, but accum
 
 **Method:**
 Accumulated Attention Graph:
+
 Accumulate attention weights across layers and normalize them.
+
 Construct an Accumulated Attention Graph to see if syntactic structures gradually emerge.
 
 **Steps:**
-Collect attention weights from each layer.
-Accumulate attention weights:
-Use either weighted accumulation (emphasizing higher layers) or average accumulation (more balanced).
-Construct Accumulated Attention Graph.
-Perform dependency parsing on the accumulated attention graph to observe if a valid dependency tree forms.
+
+1. Collect attention weights from each layer.
+
+2. Accumulate attention weights:
+
+3. Use either weighted accumulation (emphasizing higher layers) or average accumulation (more balanced).
+
+4. Construct Accumulated Attention Graph.
+
+5. Perform dependency parsing on the accumulated attention graph to observe if a valid dependency tree forms.
 
 **Expected Outcome:**
+
 Higher-layer accumulated attention graphs are more likely to reveal dependency structures.
+
 Lower-layer accumulated attention graphs may show local co-occurrences or lexical similarity.
 
 
@@ -91,20 +105,30 @@ Lower-layer accumulated attention graphs may show local co-occurrences or lexica
 
 **Objective:**
 Enhance BERT's learning of dependency relations through supervised learning.
+
 Rationale: The original BERT model was not trained with dependency supervision. Adding supervision signals from dependency trees can guide attention heads towards learning syntactic structures.
 
 **Method:**
+
 Loss Function Design:
+
 Convert Gold Dependency Tree into a Dependency Attention Map.
+
 Design a Supervised Loss Function to encourage BERT's attention maps to match the Gold Dependency Attention Map.
 
 **Steps:**
-Prepare a Gold Dependency Tree dataset.
-Convert Gold Tree to Dependency Attention Map.
-Design Supervised Loss Function:
-Use L2 norm or Cross Entropy to compute the difference between BERT's attention map and Gold Dependency Attention Map.
-Fine-tune BERT's attention layers with the supervised loss.
-Observe the changes in attention maps and check if they become closer to dependency trees.
+
+1. Prepare a Gold Dependency Tree dataset.
+
+2. Convert Gold Tree to Dependency Attention Map.
+
+3. Design Supervised Loss Function:
+
+4. Use L2 norm or Cross Entropy to compute the difference between BERT's attention map and Gold Dependency Attention Map.
+
+5. Fine-tune BERT's attention layers with the supervised loss.
+
+6. Observe the changes in attention maps and check if they become closer to dependency trees.
 
 **Expected Outcome:**
 After fine-tuning, some of BERT's attention heads will more closely correspond to dependency relations.
