@@ -15,11 +15,15 @@ This highlights the following challenges:
 ## Problem Analysis
 
 1. Multi-head Attention in BERT
+
+
 BERT uses multi-head attention to learn contextual representations.
 Each head learns different types of information, including semantic relations, co-occurrence patterns, lexical similarity, partial syntactic structures, and more.
 Not all heads are focused on learning syntactic dependencies.
 
+
 2. Edges with Attention Weights > Average Do Not Necessarily Represent Dependency
+
 High attention weights could indicate co-occurrence, referential relations, or contextual closeness, but not necessarily dependency relations.
 Low attention weights might encode key syntactic functions because certain dependencies do not require high attention weights.
 
@@ -33,12 +37,19 @@ Rationale: Not every head learns syntactic structures, so identifying specific h
 
 **Method:**
 
-Head Selection:
+Select the right heads.
+As BERT has 12 layers and 12 heads in each layer. We have 144 possible heads to investigate.
+
 Analyze each attention head in each layer separately.
+
 Calculate the matching score between each head's attention graph and the Gold Dependency Tree.
+
 Matching Metrics:
+
 UAS (Unlabeled Attachment Score): Checks if the dependency relations are correct without considering the labels.
+
 LAS (Labeled Attachment Score): Considers both dependency relations and labels.
+
 Select the heads with the highest matching scores.
 
 **Steps:**
