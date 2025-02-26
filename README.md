@@ -22,3 +22,6 @@ This project visualizes BERT's attention weights using network graphs. It helps 
 
 Visualizing BERT's attention weights through dependency parsing is crucial for understanding and interpreting how this powerful language model processes text. By examining attention patterns, researchers and practitioners can gain insights into how BERT captures linguistic relationships, identifies important contextual connections, and builds semantic representations. These visualizations serve as a valuable diagnostic tool for model interpretability, helping to demystify the "black box" nature of transformer models. They can reveal whether BERT is learning meaningful grammatical structures, focusing on relevant tokens, or potentially developing problematic biases. This understanding is essential for improving model performance, debugging issues, and ensuring responsible deployment of BERT-based applications in real-world scenarios.
 
+From the BERT attention weights, we can probably derive many information, such as grammatical structure, semantical structure, and even world-knowledge.
+
+
