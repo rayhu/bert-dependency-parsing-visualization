@@ -1,7 +1,7 @@
 # Papers
 
 ## Group Tokens
-[Multi-Token Joint Speculative Decoding for Accelerating Large Language Model Inference, Qin et al.,](https://arxiv.org/abs/2407.09722v1)
+[Multi-Token Joint Speculative Decoding for Accelerating Large Language Model Inference, Qin et al., 2024](https://arxiv.org/abs/2407.09722v1)
 
 This paper has an innovative point of joint perplexity with multi-token considered together. We shall similarly group tokens.
 It is key to understanding the semantic structural embedding.
@@ -27,13 +27,13 @@ The structure probe found that all syntax trees are implicitly represented in EL
 The hierarchical structure of syntax trees is reflected geometrically in the transformed space.
 
 ## 
-[Dissecting Recall of Factual Associations in Auto-Regressive Language Models. Geva et al.,](https://arxiv.org/abs/2304.14767)
+[Dissecting Recall of Factual Associations in Auto-Regressive Language Models. Geva et al., 2023](https://arxiv.org/abs/2304.14767)
 
 Attention heads encode subject-attribute mappings and play a crucial role in attribute extraction.
 The last-subject position is enriched with multiple related attributes, facilitating flexible and contextualized retrieval.
 
 ## Jing's Repo
-[Demystifying Verbatim Memorization in Large Language Models](https://github.com/explanare/verbatim-memorization)
+[Demystifying Verbatim Memorization in Large Language Models., 2025](https://github.com/explanare/verbatim-memorization)
 
 Study verbatim memorization. What about make a loss function to punish the verbatim memorization?
 
