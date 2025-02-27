@@ -26,14 +26,14 @@ It talks about finding implicit vocabulary from tokenization, and semantic repre
 The structure probe found that all syntax trees are implicitly represented in ELMo and BERT but not in traditional word embeddings!
 The hierarchical structure of syntax trees is reflected geometrically in the transformed space.
 
-## 
+## Recall with attention edge
 [Dissecting Recall of Factual Associations in Auto-Regressive Language Models. Geva et al., 2023](https://arxiv.org/abs/2304.14767)
 
 Attention heads encode subject-attribute mappings and play a crucial role in attribute extraction.
 The last-subject position is enriched with multiple related attributes, facilitating flexible and contextualized retrieval.
 
-## Jing's Repo
+## Jing Huang's Repo
 [Demystifying Verbatim Memorization in Large Language Models., 2025](https://github.com/explanare/verbatim-memorization)
 
-Study verbatim memorization. What about make a loss function to punish the verbatim memorization?
+Study verbatim memorization. What about making a loss function to punish the verbatim memorization?
 
