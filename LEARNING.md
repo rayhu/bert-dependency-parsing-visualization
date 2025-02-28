@@ -9,7 +9,9 @@ It is key to understanding the semantic structural embedding.
 ## What did BERT Heads learn
 [What Does BERT Look At? An Analysis of BERT's Attention, Clark et al., 2019](https://arxiv.org/abs/1906.04341)
 
-It is about what different heads in different layers learned during training.
+It is about what different heads in different layers learned during training. 
+1. The attention-based probing classifier that takes attention maps as input. The classifier achieves 77 UAS at dependency parsing
+2. The reason why BERT attend to SEP is for "no-op".
 
 ## Why BERT heads learn
 [Identifying Semantic Induction Heads to Understand In-Context Learning, Ren et al., 2024](https://arxiv.org/pdf/2402.13055)
@@ -59,7 +61,7 @@ Generalize SVD to high-dimensional space.
 ##
 [Independent Component Analysis: Algorithms and Applications](https://www.sciencedirect.com/science/article/abs/pii/S0893608000000265)
 
-Attention weight is basically a mixture of the attentions. After many round of trainings, we received a model weight that is mixture of syntatical dependencies, semantical dependencies, and pragmatics dependencies. Now, we need to decompose them into individual components and make them a tensor structure.
+Attention weight is basically a mixture of the attentions learned from context, sometimes even with a long distance. After many round of trainings, we received a model weight that is mixture of syntatical dependencies, semantical dependencies, and pragmatics dependencies. Now, we need to decompose them into individual components and make them a tensor structure.
 
 Why the LLM is language model instead of a conceptual model? Because it starts from token and end with token. We stopped training when the token prediction is reaasonally accurate. Why shall not we measure the high dimensional dependencies for reasoning, and stop training when the data structure is completed populated?
 
