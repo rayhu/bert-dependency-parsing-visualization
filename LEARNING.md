@@ -37,3 +37,24 @@ The last-subject position is enriched with multiple related attributes, facilita
 
 Study verbatim memorization. What about making a loss function to punish the verbatim memorization?
 
+
+## Semantic Entities as Tensors
+
+[Tensor Decomposition for Signal Processing and Machine Learning. Sidiropoulos et al., 2016](https://arxiv.org/abs/1607.01668)
+
+Basically, we are trying to figure out the hidden latent variable by observing the distribution. Think about Bayesian generative model or HMM. But structured in a high-dimensional space. Why? Because the semantic entities are embedded in high-dimensional space instead of sequential signals.
+
+If we are looking at a paper, we can observe the tokens, of course, and then we can orgnize them structurely, by finding the important clusting of the tokens, for example, the title and the abstract shall receive more attention than the content or citations.
+
+In a hidden latent variable model, the High Order Moment captures the high-dimentional relavance between the observed data. When we have 3 variables, we need the third order moment which is a three dimensional covariance tensors. For 4 variables, we need four-dimensions covariance tensor.
+
+Then, we use CPD to decompose it to find the conditional distribution of each observations.
+
+## CPD for tensors
+[Understanding the CANDECOMP/PARAFAC Tensor Decomposition](https://www.alexejgossmann.com/tensor_decomposition_CP/)
+
+## Higher-Order Singular Value Decomposition (HOSVD)
+Generalize SVD to high-dimensional space.
+
+
+
