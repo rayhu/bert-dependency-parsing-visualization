@@ -56,5 +56,12 @@ Then, we use CPD to decompose it to find the conditional distribution of each ob
 ## Higher-Order Singular Value Decomposition (HOSVD)
 Generalize SVD to high-dimensional space.
 
+##
+[Independent Component Analysis: Algorithms and Applications](https://www.sciencedirect.com/science/article/abs/pii/S0893608000000265)
 
+Attention weight is basically a mixture of the attentions. After many round of trainings, we received a model weight that is mixture of syntatical dependencies, semantical dependencies, and pragmatics dependencies. Now, we need to decompose them into individual components and make them a tensor structure.
+
+Why the LLM is language model instead of a conceptual model? Because it starts from token and end with token. We stopped training when the token prediction is reaasonally accurate. Why shall not we measure the high dimensional dependencies for reasoning, and stop training when the data structure is completed populated?
+
+It is like a student graduate from college, he doesn't have all the world knowledge, but he has great reasoning capability and can resolve college level problems by doing some retrieval and reasoning.
 
