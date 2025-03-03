@@ -18,6 +18,14 @@ It is about what different heads in different layers learned during training.
 
 It is about how BERT heads was able to capture syntactical and semantical embeddings.
 
+
+##  Graph-based Neural Dependency Parser
+
+[Graph-based Neural Dependency Parser, Nivre et al., 2017](https://aclanthology.org/K17-3002/)
+
+It is about how to use neural network with graph to do the dependency parsing. Could be used as a gold standard for the parsing.
+
+
 ## Implicit Vocabulary which is critical for Semantic Representation
 [Token Erasure as a Footprint of Implicit Vocabulary Items in LLMs, Feucht et al., 2024](https://arxiv.org/abs/2406.20086)
 

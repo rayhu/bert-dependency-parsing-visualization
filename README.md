@@ -14,7 +14,7 @@ This corresponds to compositionality in language, that words form phrases, phras
 
 2. Hierarchical Connection: The lower head tells the higher head that the lower layer job is done. For example: "The data I am passing to you shows the syntactical parsing is done. Now do the semantical parsing". This closely relates to linguistic processing stages, from the structure of syntax to the meaning of semantics.
 
-3. Causal Influence Connection: The lower head tells the higher head that the semantical entities have certain causal relationships. This maps well to discourse-level meaning and pragmatic reasoning—how different ideas interact causally. This aspect is critical for tasks like reasoning and dialogue modeling.
+3. Causal Influence Connection: The lower head tells the higher head that the semantical entities have certain causal relationships. This maps well to discourse-level meaning and pragmatic reasoning—how different ideas interact causally. This aspect is critical for tasks like reasoning and dialogue modeling. In the 2017 paper [What Does BERT Look At? An Analysis of BERT's Attention, Clark et al., 2019](https://arxiv.org/abs/1906.04341), the authors probed coreference resolution while the causal relationships is a better connection type as it is more general. Coreference Resolution is a task that is could go cross sentences.
 
 
 To visualize it, we can connect the output of heads across layers so that the head output is the head input of the next layer. This will be a graph data structure that represents the heads as nodes and their connections as edges. Then, we shall label this edge using the three types above.
